@@ -1,0 +1,15 @@
+{
+  "name": "image-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mikhail <volkov.work1@gmail.com> Volkov",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^1.2.2",
+    "mv": "^2.1.1"
+  }
+}
