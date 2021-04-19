@@ -16,20 +16,17 @@ const httpServer = http.createServer((req,res)=>{
                 break;
         }
     }else if(req.method == "POST"){
-       
         let oldpath;
         let newpath;
         var form = new formidable.IncomingForm();
         form.parse(req, function (err, fields, files) {
-            console.log(files.filetoupload.path);
             oldpath = files.filetoupload.path;
             newpath = __dirname+'/static/images/'+files.filetoupload.name;
-           res.end(); 
            mv(oldpath, newpath, function (err) {
             if (err) throw err;
             });
         });
-
+        sendRes("index.html","text/html",res);
     }else{
         res.writeHead(404);
         res.write("404 not found");
